@@ -8,8 +8,8 @@
 
   :dependencies [[org.clojure/clojure       "1.10.0"]
                  [org.clojure/clojurescript "1.10.773"]
-                 [prospero/prospero         "0.1.0"]
-                 [prospero/iris             "0.1.0"]]
+                 [prospero/prospero         "0.1.1"]
+                 [prospero/iris             "0.1.1"]]
 
   :plugins [[lein-figwheel "0.5.20"]
             [lein-cljsbuild "1.1.7" :exclusions [[org.clojure/clojure]]]]

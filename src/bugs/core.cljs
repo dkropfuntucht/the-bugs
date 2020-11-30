@@ -1,5 +1,7 @@
 (ns bugs.core
-  (:require [iris.core :as iris]
+  (:require [bugs.enemies :as enemies]
+            [bugs.sprite-font :as sprite-font]
+            [iris.core :as iris]
             [prospero.core :as procore]
             [prospero.game-objects :as progo]))
 
@@ -9,6 +11,11 @@
                   ::iris/web-root       (.getElementById js/document "app")})
 
 (procore/start-game game-system
-                    [(-> (progo/base-object game-system)
-                         (progo/bounds-box  1024 768)
-                         (progo/colour-rgb  255 0 0))])
+                    [(sprite-font/letter game-system  30  10 1 :t)
+                     (sprite-font/letter game-system 386  10 1 :h)
+                     (sprite-font/letter game-system 686  10 1 :e)
+                     (sprite-font/letter game-system   0 350 1 :b)
+                     (sprite-font/letter game-system 250 350 1 :u)
+                     (sprite-font/letter game-system 509 350 1 :g)
+                     (sprite-font/letter game-system 769 350 1 :s)
+                     (enemies/make-bug-manager game-system)])
