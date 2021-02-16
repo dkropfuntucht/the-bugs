@@ -54,10 +54,10 @@ Now let's make a function to build our first enemy:
   (-> (progo/base-object  game-system)
       (progo/bounds-box   tile-size tile-size)
       (progo/sprite-sheet {:sprite-sheet-path "/images/sprite_sheet.png"
-                           :width              tile-size
-                           :height             tile-size
-                           :columns            5
-                           :rows               5})
+                           :sprite-width      tile-size
+                           :sprite-height     tile-size
+                           :columns           5
+                           :rows              5})
       (progo/sprite-index 0 0)
       (progo/position-3d  x-loc y-loc 0)))
 ```

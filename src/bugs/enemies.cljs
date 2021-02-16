@@ -8,8 +8,8 @@
   (-> (progo/base-object  game-system)
       (progo/bounds-box   tile-size tile-size)
       (progo/sprite-sheet {:sprite-sheet-path "/images/sprite_sheet.png"
-                           :width             tile-size
-                           :height            tile-size
+                           :sprite-width      tile-size
+                           :sprite-height     tile-size
                            :columns           5
                            :rows              5})
       (progo/sprite-index 0 0)
